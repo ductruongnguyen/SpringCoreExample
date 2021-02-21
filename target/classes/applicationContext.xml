@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Create child Bean-->
+	<bean id="carEngine" class="springdemo.engine.BMWEngine"/>
+	<bean id="motorEngine" class="springdemo.engine.HondaEngine"/>
+
+	<bean id="myCar" class="springdemo.vehicle.Car">
+		<constructor-arg ref="carEngine"/>
+	</bean>
+	<bean id="myMotor" class="springdemo.vehicle.Motor">
+		<property name="engine" ref="motorEngine"/>
+	</bean>
+
+</beans>
