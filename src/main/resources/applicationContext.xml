@@ -13,6 +13,7 @@
 	</bean>
 	<bean id="myMotor" class="springdemo.vehicle.Motor">
 		<property name="engine" ref="motorEngine"/>
+		<property name="brand" value="HONDA JAPAN" /> <!-- literal method !-->
 	</bean>
 
 </beans>

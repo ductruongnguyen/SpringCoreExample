@@ -1,6 +1,7 @@
 package springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import springdemo.vehicle.Motor;
 import springdemo.vehicle.Vehicle;
 
 public class SpringApp {
@@ -17,9 +18,10 @@ public class SpringApp {
         // load the Spring configuration file
         ClassPathXmlApplicationContext context2 = new ClassPathXmlApplicationContext("applicationContext.xml");
         // retrieve the bean from spring container
-        Vehicle vehicle2 = context2.getBean("myMotor", Vehicle.class);
+        Motor vehicle2 = context2.getBean("myMotor", Motor.class);
         // call methods on the bean
         vehicle2.move();
+        System.out.println(vehicle2.getBrand());
         // close the context
         context.close();
     }

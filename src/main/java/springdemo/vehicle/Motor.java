@@ -6,6 +6,7 @@ import springdemo.vehicle.Vehicle;
 
 public class Motor implements Vehicle {
     private Engine engine;
+    private String brand;
 
     @Override
     public void move() {
@@ -15,5 +16,13 @@ public class Motor implements Vehicle {
 
     public void setEngine(Engine engine) {
         this.engine = engine;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getBrand() {
+        return this.brand;
     }
 }
